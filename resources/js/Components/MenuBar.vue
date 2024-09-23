@@ -36,7 +36,9 @@ onMounted(async () => {
                     <div class="col-md-6">
                         <div class="text-md-end text-center">
                             <ul class="header_list">
-                                <li><a href="/policy?type=about">About</a></li>
+                                <li>
+                                    <Link href="/policy?type=about">About</Link>
+                                </li>
 
                                 <li v-if="isLoggedIn">
                                     <Link href="/profile"> <i class="linearicons-user"></i> Account</Link>
@@ -71,12 +73,14 @@ onMounted(async () => {
                                 <Link class="nav-link nav_item" href="/">Home</Link>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle nav-link" data-bs-toggle="dropdown" href="#">Products</a>
+                                <Link class="dropdown-toggle nav-link" data-bs-toggle="dropdown" href="#">Products
+                                </Link>
                                 <div class="dropdown-menu">
                                     <ul id="CategoryItem">
                                         <li v-for="category in categories" :key="category.id">
-                                            <a class="dropdown-item nav-link nav_item"
-                                                :href="`/product-by-category?id=${category.id}`">{{ category.name }}</a>
+                                            <Link class="dropdown-item nav-link nav_item"
+                                                :href="`/product-by-category?id=${category.id}`">{{ category.name }}
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -90,8 +94,8 @@ onMounted(async () => {
                                 </Link>
                             </li>
                             <li>
-                                <a class="nav-link search_trigger" href="javascript:void(0);"><i
-                                        class="linearicons-magnifier"></i> Search</a>
+                                <Link class="nav-link search_trigger" href="javascript:void(0);"><i
+                                    class="linearicons-magnifier"></i> Search</Link>
                                 <div class="search_wrap">
                                     <span class="close-search"><i class="ion-ios-close-empty"></i></span>
                                     <form>
