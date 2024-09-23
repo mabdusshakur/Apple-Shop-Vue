@@ -11,7 +11,6 @@ defineProps({
 </script>
 <template>
     <div class="col-lg-3 col-md-4 col-6" v-for="(item, index) in items" :key="index">
-        console.log(item);
         <div class="product">
             <div class="product_img">
                 <a href="#">
