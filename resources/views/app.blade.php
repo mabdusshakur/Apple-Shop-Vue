@@ -38,9 +38,9 @@
     <script src="{{ asset('user/assets/js/axios.min.js') }}"></script>
 
     {{-- For The Client Side Auth --}}
-    {{-- <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script> --}}
+    <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
 
-    {{-- <script src="{{ asset('user/assets/js/auth.js') }}"></script> --}}
+    <script src="{{ asset('user/assets/js/auth.js') }}"></script>
 
     @vite('resources/js/app.js')
     @inertiaHead
