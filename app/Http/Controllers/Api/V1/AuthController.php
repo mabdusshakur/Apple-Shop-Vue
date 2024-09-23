@@ -88,7 +88,7 @@ class AuthController extends Controller
                 return ResponseHelper::sendError('Token creation failed', 200);
             }
 
-            return ResponseHelper::sendSuccess('OTP verified successfully', null, 200)->cookie('token', $token, time() + $expiryTime);
+            return ResponseHelper::sendSuccess('OTP verified successfully', null, 200)->cookie('token', $token, time() + $expiryTime, null, null, false, false);
         } catch (\Throwable $th) {
             return ResponseHelper::sendError("Failed to verify OTP", $th->getMessage(), 500);
         }
