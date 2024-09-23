@@ -19,7 +19,7 @@ defineProps({
                 <div class="product_action_box">
                     <ul class="list_none pr_action_btn">
                         <li>
-                            <a :href="`/details?id=${item.id}`" class="popup-ajax"><i
+                            <a :href="`/product-details?id=${item.id}`" class="popup-ajax"><i
                                     class="icon-magnifier-add"></i></a>
                         </li>
                     </ul>
@@ -27,7 +27,7 @@ defineProps({
             </div>
             <div class="product_info">
                 <h6 class="product_title">
-                    <a :href="`/details?id=${item.id}`">{{ item.title }}</a>
+                    <a :href="`/product-details?id=${item.id}`">{{ item.title }}</a>
                 </h6>
                 <div class="product_price">
                     <span class="price">${{ item.price }}</span>
