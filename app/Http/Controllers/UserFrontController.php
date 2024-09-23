@@ -32,9 +32,9 @@ class UserFrontController extends Controller
     {
         return Inertia::render('WishListPage');
     }
-    function cartListPage(): View
+    function cartListPage()
     {
-        return view('user.pages.cart-list-page');
+        return Inertia::render('CartListPage');
     }
 
     function productDetailsPage()
