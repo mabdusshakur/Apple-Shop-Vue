@@ -4,53 +4,54 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Inertia\Inertia;
 
 class UserFrontController extends Controller
 {
-    function homePage(): View
+    function homePage()
     {
-        return view('user.pages.home-page');
+        return Inertia::render('HomePage');
     }
 
-    function loginPage(): View
+    function loginPage()
     {
-        return view('user.pages.login-page');
+        return Inertia::render('Auth/LoginPage');
     }
 
-    function verifyOtpPage(): View
+    function verifyOtpPage()
     {
-        return view('user.pages.verify-page');
+        return Inertia::render('Auth/VerifyPage');
     }
 
-    function profilePage(): View
+    function profilePage()
     {
-        return view('user.pages.profile-page');
+        return Inertia::render('ProfilePage');
     }
 
-    function wishListPage(): View
+    function wishListPage()
     {
-        return view('user.pages.wish-list-page');
+        return Inertia::render('WishListPage');
     }
     function cartListPage(): View
     {
         return view('user.pages.cart-list-page');
     }
 
-    function productDetailsPage(): View
+    function productDetailsPage()
     {
-        return view('user.pages.details-page');
+        return Inertia::render('DetailsPage');
     }
-    function policyPage(): View
+    function policyPage()
     {
-        return view('user.pages.policy-page');
+        return Inertia::render('PolicyPage');
     }
-    function productByBrandPage(): View
+    function productByBrandPage()
     {
-        return view('user.pages.product-by-brand-page');
+        return Inertia::render('ProductByBrandPage');
     }
-    function productByCategoryPage(): View
+    function productByCategoryPage()
     {
-        return view('user.pages.product-by-category-page');
+        return Inertia::render('ProductByCategoryPage');
     }
 
 }
