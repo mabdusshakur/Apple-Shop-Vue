@@ -21,7 +21,7 @@ class WishlistController extends Controller
             // Get the customer id from the request
             $customer_id = TokenAuth::getCustomerId($request);
 
-            $data = Wishlist::where('customer_id', $customer_id)->with('product')->get();
+            $data = Wishlist::where('customer_id', $customer_id)->with('product', 'product.productDetail:id,product_id')->get();
 
             return ResponseHelper::sendSuccess('Wishlist retrieved successfully', $data, 200);
         } catch (\Throwable $th) {
