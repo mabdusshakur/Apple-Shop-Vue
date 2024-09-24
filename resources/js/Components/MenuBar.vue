@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-
+import { router } from '@inertiajs/vue3'
 const categories = ref([]);
 
 async function Category() {
@@ -11,10 +11,16 @@ async function Category() {
 function logout() {
     axios.post('/api/auth/logout')
         .then(res => {
-            window.location.href = '/login';
-            setLoggedOut();
+            router.visit('/login')
+            sessionStorage.removeItem('is_auth');
         })
 }
+
+function isLoggedIn() {
+    return sessionStorage.getItem('is_auth');
+}
+
+console.log(isLoggedIn());
 
 onMounted(async () => {
     await Category();
@@ -40,10 +46,10 @@ onMounted(async () => {
                                     <Link href="/policy?type=about">About</Link>
                                 </li>
 
-                                <li v-if="isLoggedIn">
+                                <li v-if="isLoggedIn()">
                                     <Link href="/profile"> <i class="linearicons-user"></i> Account</Link>
                                 </li>
-                                <li v-if="isLoggedIn">
+                                <li v-if="isLoggedIn()">
                                     <Link class="btn btn-danger btn-sm" @click="logout">
                                     Logout</Link>
                                 </li>
