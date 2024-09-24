@@ -4,7 +4,7 @@ import { createApp, h } from 'vue'
 import { createInertiaApp, Link } from '@inertiajs/vue3'
 
 createInertiaApp({
-    resolve: name => {
+    resolve: async name => {
         const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
         return pages[`./Pages/${name}.vue`]
     },
