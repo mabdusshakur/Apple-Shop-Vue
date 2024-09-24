@@ -17,6 +17,7 @@
 -   You can find the project at this GitHub repository: [Apple-Shop-Laravel-11- Blade version](https://github.com/mabdusshakur/Apple-Shop-Laravel-11)
 
 ** URLs **
+
 Root URL: `http://127.0.0.1:8000 - vue `
 
 Admin URL: `http://127.0.0.1:8000/admin - blade`
