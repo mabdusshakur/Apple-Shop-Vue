@@ -18,4 +18,5 @@
 
 ** URLs **
 Root URL: `http://127.0.0.1:8000 - vue `
+
 Admin URL: `http://127.0.0.1:8000/admin - blade`
