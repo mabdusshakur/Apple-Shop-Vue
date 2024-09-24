@@ -16,7 +16,7 @@ async function verify() {
             otp: code
         }).then(res => {
             if (res.data.success === true) {
-                setLoggedIn();
+                sessionStorage.setItem('is_auth', true);
                 if (sessionStorage.getItem("last_location")) {
                     router.visit(sessionStorage.getItem("last_location"))
                 } else {
